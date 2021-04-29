@@ -11,7 +11,7 @@ It also installs `native-image`
 
 ## Run ##
 
-The default `ENTRYPOINT` for this image is `mvn`.
+The default `CMD` for this image is `mvn`.
 
 If you want to `mvn clean install` your Java project, CD where the pom.xml is located, then:
 
@@ -21,7 +21,7 @@ $ docker run -it --rm \
     -v "$PWD":/opt/app  \
     -v "$HOME"/.m2:/root/.m2 \
     softinstigate/graalvm-maven \
-    clean package
+    mvn clean package
 ```
 
 > The `-v "$HOME"/.m2:/root/.m2` parameter mounts your local `~/.m2` Maven repository as a Docker volume.
