@@ -1,3 +1,3 @@
 #!/bin/bash
 
-source /root/.bashrc && mvn "$@"
+source /root/.bashrc && source /usr/local/bin/mvn-entrypoint.sh
